@@ -1,12 +1,13 @@
-package db;
+package com.example.mofeiweather.db;
 
-import org.litepal.crud.DataSupport;
 
-public class City extends DataSupport {
+import org.litepal.crud.LitePalSupport;
+
+public class City extends LitePalSupport {
     private int id;
     private String cityName;
     private int cityCode;
-    private int proinceId;
+    private int provinceId;
 
     public int getId() {
         return id;
@@ -28,16 +29,19 @@ public class City extends DataSupport {
         this.cityCode = cityCode;
     }
 
-    public int getProinceId() {
-        return proinceId;
+    public int getProvinceId() {
+        return provinceId;
     }
 
-    public void setProinceId(int proinceId) {
-        this.proinceId = proinceId;
+    public void setProvinceId(int proinceId) {
+        this.provinceId = proinceId;
     }
 
     public void setId(int id) {
         this.id = id;
 
+    }
+
+    public void setCityId(City city) {
     }
 }
